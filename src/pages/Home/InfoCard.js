@@ -1,15 +1,12 @@
 import React from 'react';
 
-const InfoCard = () => {
+const InfoCard = ({img,bgclass}) => {
     return (
-        <div class="card w-96 bg-base-100 shadow-xl image-full">
-            <figure><img src="https://api.lorem.space/image/shoes?w=400&h=225" alt="Shoes" /></figure>
+        <div class={`card lg:card-side  shadow-xl ${bgclass}`}>
+            <figure><img src={img} className='ml-5' alt="Album"/></figure>
             <div class="card-body">
-                <h2 class="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                </div>
+                <h2 class="card-title">New album is released!</h2>
+                <p>Click the button to listen on Spotiwhy app.</p>
             </div>
         </div>
     );

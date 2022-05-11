@@ -9,9 +9,10 @@ const Navbar = () => {
         <li><Link to={'/contact'}>Contact-Us</Link></li>
         <li><Link to={'/about'}>About</Link></li>
         <li><Link to={'/login'}>Login</Link></li>
+       
     </>
     return (
-        <div class="navbar bg-base-100">
+        <div class="navbar bg-primary  px-14">
             <div class="navbar-start">
                 <div class="dropdown">
                     <label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -23,7 +24,7 @@ const Navbar = () => {
                 </div>
                 <a class="btn btn-ghost normal-case text-xl">Doctor Azad</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-center hidden lg:flex ">
                 <ul class="menu menu-horizontal p-0">
                    {manuItems}
                 </ul>
