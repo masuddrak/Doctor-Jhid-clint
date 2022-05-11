@@ -4,6 +4,10 @@ import Navbar from './pages/sheard/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
+import Appointmen from './pages/Appointment/Appointmen';
+import Reviews from './pages/Reviews/Reviews';
+import Contact from './pages/Contact/Contact';
+import Login from './pages/Login/Login';
 
 function App() {
   return (
@@ -12,7 +16,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
+        <Route path='appointment' element={<Appointmen></Appointmen>}></Route>
+        <Route path='reviewa' element={<Reviews></Reviews>}></Route>
+        <Route path='contact' element={<Contact></Contact>}></Route>
         <Route path='about' element={<About></About>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
       </Routes>
     </div>
   );
