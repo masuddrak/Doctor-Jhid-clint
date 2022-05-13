@@ -8,7 +8,7 @@ import Tesimonials from './Tesimonials';
 
 const Home = () => {
     return (
-        <div className='container mx-auto'>
+        <div>
             <Banner></Banner>
             <Info></Info>
             <Services></Services>
