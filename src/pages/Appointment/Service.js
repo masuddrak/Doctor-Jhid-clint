@@ -2,7 +2,6 @@ import React from 'react';
 import Mybtn from '../sheard/Mybtn';
 
 const Service = ({ service, setTreatment }) => {
-    console.log(service)
     const { name, slots } = service
 
     return (
