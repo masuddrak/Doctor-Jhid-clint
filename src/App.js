@@ -9,6 +9,7 @@ import Reviews from './pages/Reviews/Reviews';
 import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Footer from './pages/Reviews/Footer';
+import SignUp from './pages/Login/SignUp';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='contact' element={<Contact></Contact>}></Route>
         <Route path='about' element={<About></About>}></Route>
         <Route path='login' element={<Login></Login>}></Route>
+        <Route path='signup' element={<SignUp></SignUp>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

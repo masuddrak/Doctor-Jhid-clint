@@ -2,7 +2,7 @@ import React from 'react';
 import footer from '../../assets/images/footer.png';
 const Footer = () => {
     return (
-        <div className='' style={{background:`url(${footer})`,backgroundSize:'cover'}}>
+        <div  style={{background:`url(${footer})`,backgroundSize:'cover'}}>
             <footer className="footer p-10">
                 <div>
                     <span className="footer-title">Services</span>
@@ -25,7 +25,7 @@ const Footer = () => {
                     <a className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <p className='text-center text-white'>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+            <p className='text-center'>Copyright © 2022 - Md.Masud Rana</p>
         </div>
     );
 };
