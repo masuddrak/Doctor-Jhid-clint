@@ -10,6 +10,7 @@ import Contact from './pages/Contact/Contact';
 import Login from './pages/Login/Login';
 import Footer from './pages/Reviews/Footer';
 import SignUp from './pages/Login/SignUp';
+import RequireAuth from './pages/Login/RequireAuth';
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='home' element={<Home></Home>}></Route>
-        <Route path='appointment' element={<Appointmen></Appointmen>}></Route>
+        <Route path='appointment' element={<RequireAuth>
+          <Appointmen></Appointmen>
+        </RequireAuth>}></Route>
         <Route path='reviewa' element={<Reviews></Reviews>}></Route>
         <Route path='contact' element={<Contact></Contact>}></Route>
         <Route path='about' element={<About></About>}></Route>
