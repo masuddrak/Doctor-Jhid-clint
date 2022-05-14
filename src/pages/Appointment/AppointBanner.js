@@ -7,8 +7,8 @@ import backChair from '../../assets/images/bg.png'
 const AppointBanner = ({date,setDate}) => {
     
     return (
-        <div  class="hero min-h-screen "   style={{background:`url(${backChair})`,backgroundSize:'cover'}}>
-            <div class="hero-content flex-col lg:flex-row-reverse">
+        <div  className="hero min-h-screen "   style={{background:`url(${backChair})`,backgroundSize:'cover'}}>
+            <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={chair} alt='chair img' />
                 <div className='mr-5'>
                     <DayPicker
