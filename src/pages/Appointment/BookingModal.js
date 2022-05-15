@@ -2,16 +2,42 @@ import { format } from 'date-fns';
 import sl from 'date-fns/esm/locale/sl/index.js';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const BookingModal = ({ date, treatment,setTreatment }) => {
     const [user, loading, error] = useAuthState(auth);
-    const { name,slots } = treatment
+    const { _id,name,slots } = treatment
+    const formatedDate=format(date, 'PP')
     const handelBooking=(e)=>{
         e.preventDefault()
         const slotTime=e.target.slot.value
         console.log(date,slotTime)
-        setTreatment(null)
+        const booking={
+            treatmentId:_id,
+            treatmentName:name,
+            date:formatedDate,
+            slotTime,
+            patient:user.email,
+            patientName:user.displayName,
+            phone:e.target.phone.value
+        }
+        fetch('http://localhost:5000/booking',{
+            method:"POST",
+            headers:{'content-type':'application/json'},
+            body:JSON.stringify(booking)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data)
+            if(data.success){
+                toast(`appointment is set ${formatedDate} at ${slotTime}`)
+            }
+            else{
+                toast.error(`Alerady have a appointment on ${data.booking?.date} at ${data.booking?.slotTime}`)
+            }
+            setTreatment(null)
+        })
     }
     return (
         <div>

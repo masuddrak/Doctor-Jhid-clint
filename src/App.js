@@ -11,7 +11,8 @@ import Login from './pages/Login/Login';
 import Footer from './pages/Reviews/Footer';
 import SignUp from './pages/Login/SignUp';
 import RequireAuth from './pages/Login/RequireAuth';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div className='max-w-7xl mx-auto'>
@@ -28,6 +29,7 @@ function App() {
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='signup' element={<SignUp></SignUp>}></Route>
       </Routes>
+      <ToastContainer />
       <Footer></Footer>
     </div>
   );
