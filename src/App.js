@@ -16,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Dashbord from './pages/Dashbord/Dashbord';
 import MyAppointment from './pages/Dashbord/MyAppointment';
 import MyReviews from './pages/Dashbord/MyReviews';
+import AllUser from './pages/Dashbord/AllUser';
 function App() {
   return (
     <div className='max-w-7xl mx-auto'>
@@ -33,6 +34,7 @@ function App() {
         </RequireAuth>}>
           <Route index element={<MyAppointment></MyAppointment>}></Route>
           <Route path='myReviews' element={<MyReviews></MyReviews>}></Route>
+          <Route path='allUser' element={<AllUser></AllUser>}></Route>
         </Route>
 
 
