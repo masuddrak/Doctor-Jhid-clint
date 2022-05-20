@@ -8,10 +8,17 @@ const UserRow = ({user,index,refetch}) => {
             method:'PUT',
             headers:{authorization:`Bearer ${localStorage.getItem('accessToken')}`}
         })
-        .then(res=>res.json())
+        .then(res=>{
+            if(res.status===403){
+                toast.error('Forbbiden Authorization')
+            }
+           return res.json()})
         .then(data=>{
-            toast.success('created Admin Success')
-            refetch()
+            if(data.modifiedCount >0){
+                console.log(data)
+                toast.success('created Admin Success')
+                refetch()
+            }
         })
     }
     return (
