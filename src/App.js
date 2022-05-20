@@ -18,6 +18,7 @@ import MyAppointment from './pages/Dashbord/MyAppointment';
 import MyReviews from './pages/Dashbord/MyReviews';
 import AllUser from './pages/Dashbord/AllUser';
 import AddDoctor from './pages/Dashbord/AddDoctor';
+import ManageDoctors from './pages/Dashbord/ManageDoctors';
 function App() {
   return (
     <div className='max-w-7xl mx-auto'>
@@ -37,6 +38,7 @@ function App() {
           <Route path='myReviews' element={<MyReviews></MyReviews>}></Route>
           <Route path='allUser' element={<AllUser></AllUser>}></Route>
           <Route path='addDoctor' element={<AddDoctor></AddDoctor>}></Route>
+          <Route path='manageDoctors' element={<ManageDoctors></ManageDoctors>}></Route>
         </Route>
 
 
